@@ -11,9 +11,9 @@
 
 ### Скриншот: Анализ директории с кодом на различных языках на уязвимости
 
-![](docs/screenshots/1.png)
-![](docs/screenshots/2.png)
-![](docs/screenshots/3.png)
+![](docs/screenshots/1.bpm)
+![](docs/screenshots/2.bpm)
+![](docs/screenshots/3.bpm)
 
 
 
