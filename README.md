@@ -1,7 +1,6 @@
 # SecAgent — AI-агент анализа уязвимостей кода
 
 ![Python](https://img.shields.io/badge/Python-3.11%2B-blue)
-![License](https://img.shields.io/badge/License-MIT-green)
 ![Status](https://img.shields.io/badge/Status-Development-yellow)
 
 **SecAgent** — локальный CLI-агент для автоматического анализа исходного кода на уязвимости безопасности. Использует гибрид **RAG (база знаний CWE/OWASP) + локальная LLM** для максимальной точности. Работает полностью локально — код не отправляется на внешние сервера.
@@ -10,59 +9,14 @@
 
 ## 🎬 Демонстрация
 
-### Скриншот 1: Анализ файла с SQL-инъекцией
+### Скриншот: Анализ директории с кодом на различных языках на уязвимости
 
-![Screenshot 1: Single file analysis](docs/screenshots/01-single-file.png)
+![](docs/screenshots/1.png)
+![](docs/screenshots/2.png)
+![](docs/screenshots/3.png)
 
-**Команда:** `secagent scan ./vulnerable_sql.py`  
-**Результат:** находит CWE-89 (SQL Injection). Объясняет проблему и рекомендует параметризованные запросы.
 
----
 
-### Скриншот 2: Анализ мультиязычного проекта
-
-![Screenshot 2: Multi-language project](docs/screenshots/02-multiproject.png)
-
-**Команда:** `secagent scan ./project --recursive --output report.md`  
-**Результат:** сканирует 32 файла (Python, JavaScript, Java). Находит 17 уязвимостей. Создает Markdown отчет.
-
----
-
-### Скриншот 3: Анализ большого проекта
-
-![Screenshot 3: Large project analysis](docs/screenshots/03-large-project.png)
-
-**Команда:** `secagent scan ./enterprise --recursive`  
-**Результат:** анализирует 245 файлов, находит 42 уязвимости. Показывает статистику по типам и файлам.
-
----
-
-## 📸 Как добавить скриншоты
-
-**Шаг 1:** Создайте папку
-```bash
-mkdir -p docs/screenshots
-```
-
-**Шаг 2:** Сделайте скриншоты результатов анализа:
-- Запустите `secagent scan ./file.py` → сохраните как `01-single-file.png`
-- Запустите `secagent scan ./project --recursive` → сохраните как `02-multiproject.png`
-- Запустите на большом проекте → сохраните как `03-large-project.png`
-
-**Шаг 3:** Переместите в папку
-```bash
-mv ~/Downloads/01-*.png docs/screenshots/
-mv ~/Downloads/02-*.png docs/screenshots/
-mv ~/Downloads/03-*.png docs/screenshots/
-```
-
-**Шаг 4:** Commit
-```bash
-git add docs/screenshots/
-git commit -m "docs: add demo screenshots"
-```
-
-Готово! Плейсхолдеры выше автоматически покажут ваши скриншоты.
 
 ---
 
