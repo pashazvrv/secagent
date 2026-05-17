@@ -1,0 +1,15 @@
+## Knowledge base excerpts
+
+{knowledge_chunks}
+
+## Code to analyze
+
+Language: {language}
+File: {file_path}
+Function/scope: {chunk_name}
+
+```{language}
+{code_with_line_numbers}
+```
+
+Analyze the code above. Return JSON only.
